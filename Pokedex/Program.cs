@@ -15,8 +15,10 @@ var app = builder.Build();
 
 app.UseHttpsRedirection();
 
-app.MapGet("/pokemons", () => {
-    return "Deu certo!!!! UHUULLL!!";
+app.MapGet("/pokemons", (AppDbContext db) => 
+{
+    var listaPokemons = db.pokemons.ToList();
+    return Results.Ok(listaPokemons);
 });
 
 app.Run();
