@@ -1,9 +1,21 @@
 const imagem = document.querySelector('img');
+const form = document.getElementById('form');
+const inputId = document.getElementById('id');
+const nome = document.getElementById('nome-pokemon');
 
-const data = fetch("https://pokeapi.co/api/v2/pokemon/7")
-    .then((res) => res.json())
-    .then((data) => data);
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
 
-imagem.src = `${data}`;
+    const endpoint = inputId.value;
+
+    fetch(`http://viacep.com.br/ws/${endpoint}/json/`)
+        .then((res) => res.json())
+        .then((data) => {
+            console.log(data);
+            nome.innerText = `${data.logradouro}`;
+        });
+})
+
+
 
 // codigo assincrono
