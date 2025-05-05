@@ -1,15 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex Minimal API</title>
     <link rel="stylesheet" href="style.css">
-    <title>Pokedex</title>
 </head>
-<body>
-    <h1>Pokedex da alegria</h1>
 
-    <ul id="lista-pokemons"></ul>
-    <script src="./script.js"></script>
+<body>
+    
+    <h1><img src="https://cdn-icons-png.freepik.com/256/16037/16037595.png?semt=ais_hybrid" alt="">POKÉDEX DA ALEGRIA</h1>
+
+    <button id="btn-todos">Todos os Pokémons</button>
+
+    <form action="" method="get" id="form-busca-id">
+        <h2>🔍 Buscar Pokémon por ID [GET]</h2>
+        <input type="number" id="input-id-busca" placeholder="ID do Pokémon">
+        <button type="submit">Buscar</button>
+    </form>
+
+    <form action="" method="get" id="form-post">
+        <h2>➕ Adicionar novo Pokémon [POST]</h2>
+        <input type="text" id="input-nome-novo" placeholder="Nome">
+        <input type="number" id="input-peso-novo" placeholder="Peso">
+        <button type="submit">Adicionar</button>
+    </form>
+
+    <form action="" method="get" id="form-put">
+        <h2>✏️ Atualizar Pokémon [PUT]</h2>
+        <input type="number" id="input-id-update" placeholder="ID para atualizar">
+        <input type="text" id="input-nome-update" placeholder="Novo Nome">
+        <input type="number" id="input-peso-update" placeholder="Novo Peso">
+        <button type="submit">Atualizar</button>
+    </form>
+
+    <form action="" method="get" id="form-delete">
+        <h2>❌ Deletar Pokémon [DELETE]</h2>
+        <input type="number" id="input-id-delete" placeholder="ID para deletar">
+        <button type="submit">Deletar</button>
+    </form>
+
+    <div>
+        <h2>📈 RESULTADO:</h2>
+        <ul id="lista-pokemons"></ul>
+    </div>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
